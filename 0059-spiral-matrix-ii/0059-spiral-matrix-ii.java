@@ -14,12 +14,14 @@ class Solution {
                 matrix[i][right] = num++;
             }
             right--;
+            // left movement
             if (top <= bottom) {
                 for (int i = right; i >= left; i--) {
                     matrix[bottom][i] = num++;
                 }
                 bottom--;
             }
+            // up movement
             if (left <= right) {
                 for (int i = bottom; i >= top; i--) {
                     matrix[i][left] = num++;
