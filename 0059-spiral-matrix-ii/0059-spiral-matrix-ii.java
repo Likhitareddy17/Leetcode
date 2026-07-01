@@ -6,10 +6,12 @@ class Solution {
         int[][] matrix = new int[n][n];
         int left = 0, right = n-1, top = 0, bottom = n-1, num = 1;
         while (left <= right && top <= bottom) {
+            //right movement
             for (int i = left; i <= right; i++) {
                 matrix[top][i] = num++;
             }
             top++;
+            // down movement
             for (int i = top; i <= bottom; i++) {
                 matrix[i][right] = num++;
             }
