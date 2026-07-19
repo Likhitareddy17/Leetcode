@@ -2,7 +2,8 @@
 class Solution {
     public String smallestSubsequence(String s) {
         int n = s.length();
-        
+    
+
         // Find the last index where each character appears
         int[] lastIndex = new int[26];
         for (int i = 0; i < n; i++) {
