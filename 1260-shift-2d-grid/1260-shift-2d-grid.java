@@ -4,16 +4,16 @@ class Solution {
        int n=grid[0].length;//columns
         int total=m*n;
         k=k%total;
-       int[][] temp = new int[m][n]; // Instantly creates a grid of size m x n
+       int[][] temp = new int[m][n]; // grid of size m x n
 
 for (int r = 0; r < m; r++) {
     for (int c = 0; c < n; c++) {
         int new1D = (r * n + c + k) % total;
-        temp[new1D / n][new1D % n] = grid[r][c]; // Direct index access works!
+        temp[new1D / n][new1D % n] = grid[r][c]; // Direct index access 
     }
 }
 
-// Convert 2D array to List<List<Integer>> for LeetCode's return type
+// Converting 2D array to List<List<Integer>> 
 List<List<Integer>> result = new ArrayList<>();
 for (int[] row : temp) {
     List<Integer> listRow = new ArrayList<>();
