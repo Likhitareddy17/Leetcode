@@ -4,7 +4,7 @@ class Solution {
         if(n<=2) return n;
         else{
             while(xor<=n){
-                xor<<=1;
+                xor<<=1;//right shift multiplies by 2
             }
         }
         return xor;
