@@ -3,19 +3,16 @@ class Solution {
      if(k<=1){
         return 0;
      }
-     int c=0;
-     for(int i=0;i<nums.length;i++){
-        int p=1;
-        for(int j=i;j>=0;j--){
-            p*=nums[j];
-            if(p<k){
-                c++;
+     int c=0;int left=0;int p=1;
+     for(int right=0;right<nums.length;right++){
+            p*=nums[right];
+            while(p>=k){
+                p/=nums[left];
+                left++;
             }
-            else{
-                break;
-            }
+            c+=right-left+1;
         }
-     }
+     
      return c;   
     }
 }
